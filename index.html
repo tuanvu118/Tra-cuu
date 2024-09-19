@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu kết quả</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512"  href="images/Logo nền sáng.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <div class="header-content">
+            <img src="images/Logo nền sáng.png" alt="Logo" class="logo">
+            <h1 class="title">LIÊN CHI ĐOÀN KHOA CÔNG NGHỆ THÔNG TIN 1</h1>
+        </div>
+    </header>
+    
+    <main>
+    <div class="nhap">
+        <h2>Tra cứu kết quả</h2>
+        <input type="text" placeholder="Nhập mã sinh viên" required>
+         <button class="open">Tra cứu</button>
+    </div>
+    <div class="modal hide">
+        <div class="modal_inner">
+            <div class="modal_header">
+                <p>Chúc mừng bạn đã vượt qua vòng nộp CV</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="modal_body">
+                <!-- Thêm bảng chia cột để hiển thị thông tin -->
+                <div class="student-info">
+                    <div class="left-info">
+                        <p><strong>Mã Sinh Viên:</strong> <span id="studentCode"></span></p>
+                        <p><strong>Tên:</strong> <span id="fullname"></span></p>
+                        <p><strong>Ngành học:</strong> <span id="major"></span></p>
+                        <p><strong>Lớp:</strong> <span id="className"></span></p>
+                    </div>
+                    <div class="right-info">
+                        <p><strong>Thời gian phỏng vấn:</strong> <span id="interviewTime"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button>Close</button>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <!-- <img src="logo.png" alt="Logo" class="footer-logo">
+                <p>INFORMATION TECHNOLOGY SECURITY</p> -->
+            </div>
+            <div class="footer-right">
+                <h3>Liên hệ</h3>
+                <div class="contact-info">
+                    <a href="https://www.facebook.com/lcdkhoacntt1.ptit" style="color: white;"><i class="fa-solid fa-house"></i> Liên chi Đoàn Khoa CNTT1 - PTIT</a>
+                    <p><i class="fa-solid fa-phone"></i> 033.585.0230 - Hà Mạnh Dũng (Bí thư)</p>
+                    <p><i class="fa-solid fa-phone"></i> 039.454.4566 - Nguyễn Nhật Thành (Phó Bí thư)</p>
+                    <p><i class="fa-solid fa-phone"></i> 098.842.9911 - Nguyễn Thạc Anh (Phó Bí thư)</p>
+                    <p><i class="fa-solid fa-envelope"></i> bch.cntt.ptit@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>@ WebITIS created by Team ITIS_Dev</p>
+        </div>
+    </footer>
+</div>
+    
+    
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>

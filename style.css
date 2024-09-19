@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+    
+/* Phần nhập */
+.nhap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ô input */
+.nhap input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #eaf0ff; /* Màu nền tương tự */
+}
+
+/* Nút bấm */
+.nhap button {
+    padding: 10px 20px;
+    background-color:black; /* Màu đỏ như trong ảnh */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nhap button:hover {
+    background-color: darkred; /* Màu khi hover */
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6);
+}
+.modal_inner{
+     width:400px;
+     position: fixed;
+     transform: translate(-50%, -50%);
+     top:50%;
+     left: 50%;
+     background: white;
+     border-radius: 5px;
+     border:5px solid black;
+     overflow: hidden;
+     animation: modalShow 0.3s linear;
+}
+
+.modal_inner {
+    width: 600px; /* Tăng chiều rộng của modal để phù hợp với nội dung */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Căn chỉnh lại thông tin để hiển thị mỗi phần tử trên một dòng */
+.student-info {
+    display: flex;
+    justify-content: space-between; /* Căn thông tin sang 2 bên */
+    padding: 20px;
+}
+
+.left-info, .right-info {
+    width: 45%; /* Chia đều không gian giữa thông tin sinh viên và ngày/giờ phỏng vấn */
+}
+
+/* Khoảng cách giữa các dòng thông tin */
+.student-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Đảm bảo nội dung không vượt quá modal */
+.modal_body {
+    max-height: 400px;
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+}
+
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #DFF0D8; /* Màu xanh lá nhạt */
+    color: black; /* Màu chữ đen để dễ đọc */
+}
+.modal_body{
+    padding: 15px; 
+}
+.modal_body h2{
+    color: black;
+    margin-bottom: 20px;
+}
+.modal_body p{
+    margin-bottom: 15px;
+}
+.modal_footer{
+    padding: 15px;
+    text-align: right;
+}
+.modal_footer button{
+    padding: 10px 20px;
+    color:white;
+    background-color: black;
+    border-radius: 6px;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+@keyframes modalShow {
+    from{
+        top:-200px;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+/* CSS cho header */
+.header {
+    background-color: #000; /* Màu đen cho header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Định dạng nội dung bên trong header */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Định dạng cho logo */
+.header .logo {
+    height: 50px; /* Điều chỉnh kích thước logo nếu cần */
+    margin-right: 20px;
+}
+
+/* Định dạng cho tiêu đề */
+.header .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Căn chỉnh thông tin sinh viên */
+.student-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Căn chỉnh cột trái và cột phải */
+.left-info, .right-info {
+    width: 45%; /* Căn chia đều hai bên */
+}
+
+.left-info p, .right-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.modal_body {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+.nhap h2 {
+    margin-bottom: 15px; /* Khoảng cách giữa tiêu đề và input */
+    font-size: 24px;
+    color: #333; /* Đặt màu chữ nếu cần */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+.success-message {
+    background-color: #e6ffee; /* Màu nền nhẹ */
+    color: #004d00; /* Màu chữ xanh đậm */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Căn giữa */
+    font-weight: bold;
+  }
+  
